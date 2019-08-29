@@ -7,7 +7,7 @@ const cheerio = require('cheerio');
 const { accountSid, authToken }= require('../config.js');
 const client = require('twilio')(accountSid, authToken);
 
-var sampleText = 'Exerc';
+var sampleText = 'Go Be';
 
 module.exports.updateCheck = (req, res) => {
   const url = ('http://reddit.com/u/fizzthewiz/posts');
@@ -23,7 +23,7 @@ module.exports.updateCheck = (req, res) => {
            sampleText = posts.slice(10,15);
         client.messages
         .create({
-           body: 'There was an update on the reddit page',
+           body: `New post from Jim, here it is: ${posts.slice(10, 200)}`,
            from: '+17084983783',
            to: '+16302979430'
          })

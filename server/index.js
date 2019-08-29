@@ -8,16 +8,13 @@ app.use(morgan('dev'));
 const { updateCheck } = require('./updateCheck.js');
 
 
-app.get('/', (req, res) => {
-    res.send('eyyyyo');
+app.get('/test', (req, res) => {
+    res.send('Looks like the server is in fact running');
 });
 
 // setInterval(() => console.log(2+2), 1000);
 
 //twillio number (708) 498-3783
-
-app.get('/update', updateCheck);
-
 
 setInterval(updateCheck, 10000);
 
