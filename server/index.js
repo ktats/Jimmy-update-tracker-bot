@@ -12,8 +12,6 @@ app.get('/test', (req, res) => {
     res.send('Looks like the server is in fact running! This time on Jim');
 });
 
-// setInterval(() => console.log(2+2), 1000);
-
 //twillio number (708) 498-3783
 
 setInterval(updateCheck, 600000);
