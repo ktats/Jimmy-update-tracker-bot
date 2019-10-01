@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const PORT = 80;
-const rp = require('request-promise');
-const cheerio = require('cheerio');
 app.use(morgan('dev'));
 const { updateCheck } = require('./updateCheck.js');
 
