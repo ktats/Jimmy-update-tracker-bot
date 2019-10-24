@@ -21,7 +21,7 @@ module.exports.updateCheck = (req, res) => {
        } else {
            console.log('there was a change! expect a text soon');
            sampleText = posts.slice(8,20);
-           const numbersToMessage = ['+16302979430']
+           const numbersToMessage = ['+16302979430', '+19177762781']
            numbersToMessage.forEach((number) => {
              let message = client.messages.create({
                body: `Local SF legend Jim just made a new Reddit post! Go to reddit.com/user/jimmyjah/posts to check it out, then go find him at The King's Shield! Here is a preview of the post: ${posts.slice(8, 200)}`,
@@ -31,13 +31,6 @@ module.exports.updateCheck = (req, res) => {
              .then(message => console.log(message.status))
              .done();
            });
-        //    client.messages
-        //     .create({
-        //         body: `New post from Jim, here it is: ${posts.slice(10, 200)}`,
-        //         from: '+17084983783',
-        //         to: '+16302979430'
-        //     })
-        //     .then(message => console.log(message.sid));
        }
    });
 }

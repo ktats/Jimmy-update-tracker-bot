@@ -12,9 +12,9 @@ app.get('/test', (req, res) => {
 
 //twillio number (708) 498-3783
 
-// setInterval(updateCheck, 600000);
+setInterval(updateCheck, 600000);
 
-setInterval(updateCheck, 1000);
+// setInterval(updateCheck, 1000);
 
 
 app.listen(PORT, () => {
