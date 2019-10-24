@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const PORT = 80;
+const PORT = 2000;
 app.use(morgan('dev'));
 const { updateCheck } = require('./updateCheck.js');
 
